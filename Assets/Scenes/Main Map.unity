@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 3875.6372, g: 4409.3325, b: 5014.305, a: 1}
+  m_IndirectSpecularColor: {r: 3874.564, g: 4408.82, b: 5013.6147, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4910,7 +4910,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: a59dc18defe778745b000993a6375171, type: 2}
+  sharedProfile: {fileID: 11400000, guid: eb1ce08ed71eb3a4f893c31990f3b696, type: 2}
 --- !u!114 &1823688470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5149,6 +5149,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1913721396}
+  - component: {fileID: 1913721405}
   - component: {fileID: 1913721398}
   - component: {fileID: 1913721400}
   - component: {fileID: 1913721401}
@@ -5297,6 +5298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 874439a1bf7bce7489d19b0bca055e76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  createNewFile: 0
   saveFile: 0
   loadFile: 0
   clearData: 0
@@ -5304,6 +5306,16 @@ MonoBehaviour:
   deadInterface: {fileID: 1913721400}
   injectIntoInterface: 0
   showtapeSlot: 0
+  name: 
+  author: 
+  description: 
+  animatronicsUsedFor: 
+  endOfTapeTime: 0
+  filePath: 
+  timeCreated:
+    _dateTime: 1/1/0001 12:00:00 AM
+  timeLastUpdated:
+    _dateTime: 1/1/0001 12:00:00 AM
 --- !u!114 &1913721403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5334,6 +5346,36 @@ MonoBehaviour:
   clearRecordings: 0
   signals: []
   commands: []
+--- !u!114 &1913721405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913721395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c7e08ffbf52a14481fb2d82bd0e3da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showName: 
+  author: 
+  description: 
+  animatronicsUsedFor: 
+  endOfTapeTime: 0
+  createShow: 0
+  injectAudio: 0
+  showtapeSlot: 0
+  playShow: 0
+  stopShow: 0
+  recordShow: 0
+  saveRecording: 0
+  saver: {fileID: 1913721402}
+  recorder: {fileID: 1913721404}
+  DTU: {fileID: 1913721401}
+  Interface: {fileID: 1913721400}
+  play: 0
+  pause: 0
 --- !u!114 &1980918010
 MonoBehaviour:
   m_ObjectHideFlags: 0

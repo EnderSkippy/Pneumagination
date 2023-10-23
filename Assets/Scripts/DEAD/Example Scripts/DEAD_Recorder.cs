@@ -69,7 +69,7 @@ public class DEAD_Recorder : MonoBehaviour
         commands.Add(new DEAD_Command_Data() { time = time, value = value });
     }
 
-    void ApplyRecordingToTape()
+    public void ApplyRecordingToTape()
     {
         if (deadInterface == null)
         {
@@ -109,7 +109,7 @@ public class DEAD_Recorder : MonoBehaviour
         }
     }
 
-    void SaveTapeToFile()
+    public void SaveTapeToFile()
     {
         DEAD_Showtape showtape = deadInterface.GetShowtape(0);
 

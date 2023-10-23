@@ -17,14 +17,14 @@ public class DEAD_GUI_File_Saver : MonoBehaviour
     [Header("Move To Interface")]
     [SerializeField] DEAD_Interface deadInterface;
     [SerializeField] bool injectIntoInterface;
-    [SerializeField] int showtapeSlot;
+    [SerializeField] public int showtapeSlot;
 
     [Header("File Parameters")]
-    [SerializeField] string name;
-    [SerializeField] string author;
-    [SerializeField] string description;
-    [SerializeField] string animatronicsUsedFor;
-    [SerializeField] float endOfTapeTime;
+    [SerializeField] public string name;
+    [SerializeField] public string author;
+    [SerializeField] public string description;
+    [SerializeField] public string animatronicsUsedFor;
+    [SerializeField] public float endOfTapeTime;
 
     [Header("Read Only Info")]
     [SerializeField] string filePath;
@@ -68,7 +68,7 @@ public class DEAD_GUI_File_Saver : MonoBehaviour
         }
     }
 
-    void InjectAudioData()
+    public void InjectAudioData()
     {
         var extensions = new[] {new ExtensionFilter("Audio Files", "wav", "aiff", "mp3","wma"),};
         string[] files = StandaloneFileBrowser.OpenFilePanel("Load Showtape Audio", "", extensions, false);
@@ -92,7 +92,7 @@ public class DEAD_GUI_File_Saver : MonoBehaviour
         Debug.Log("Injected Into Showtape");
     }
 
-    void InjectIntoInterface()
+    public void InjectIntoInterface()
     {
         if(deadInterface == null)
         {
@@ -101,7 +101,7 @@ public class DEAD_GUI_File_Saver : MonoBehaviour
         deadInterface.SetShowtape(showtapeSlot, showtape);
     }
 
-    void ClearData()
+    public void ClearData()
     {
         showtape = new DEAD_Showtape();
         name = showtape.name;
@@ -114,7 +114,7 @@ public class DEAD_GUI_File_Saver : MonoBehaviour
         timeLastUpdated = showtape.timeLastUpdated;
     }
 
-    void SaveFile(bool newFileDate)
+    public void SaveFile(bool newFileDate)
     {
         //Preload data
         showtape.name = name;
@@ -136,7 +136,7 @@ public class DEAD_GUI_File_Saver : MonoBehaviour
         }
     }
 
-    void LoadFile()
+    public void LoadFile()
     {
         string[] files = StandaloneFileBrowser.OpenFilePanel("Load Showtape File", "", "showtape", false);
         if(files != null && files.Length != 0)

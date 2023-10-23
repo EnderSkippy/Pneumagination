@@ -6,7 +6,7 @@ public class DEAD_DTU_Tester : MonoBehaviour
 {
     [SerializeField] DEAD_Interface dead_Interface;
     [Header("Use NumKeys to test, indexes are tested DTU bits.")]
-    [SerializeField] bool overrideDTU;
+    [SerializeField] public bool overrideDTU;
     [SerializeField] int index1;
     [SerializeField] int index2;
     [SerializeField] int index3;
